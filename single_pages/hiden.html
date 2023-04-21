@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {background-color: gray;}
+        button {
+            vertical-align: top;
+            height: 40px;
+            width: 140px;
+        }
+        button.hidden {
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+
+<button id="btnId" type="button">Click me</button>
+
+<script>
+    setTimeout(function() {
+        document.getElementById("btnId").className = 'hidden';
+        }, 3000);
+</script>
+
+</body>
+</html>

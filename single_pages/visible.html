@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {background-color: gray;}
+        button {
+            visibility: hidden;
+        }
+        button.appear {
+            vertical-align: top;
+            height: 40px;
+            width: 140px;
+            visibility: visible;
+        }
+    </style>
+</head>
+
+<body>
+
+<button id="btnId" type="button">Click me</button>
+
+<script>
+    setTimeout(function() {
+        document.getElementById("btnId").className = 'appear';
+        }, 3000);
+</script>
+
+</body>
+</html>

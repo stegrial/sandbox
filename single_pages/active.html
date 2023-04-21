@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {background-color: gray;}
+        button {vertical-align: top;
+                height: 40px;
+                width: 140px;}
+    </style>
+</head>
+
+<body>
+
+<button id="btnId" type="button" disabled>Click me</button>
+
+<script>
+    setTimeout(function() {
+        document.getElementById("btnId").disabled=false;
+        }, 3000);
+</script>
+
+</body>
+</html>
