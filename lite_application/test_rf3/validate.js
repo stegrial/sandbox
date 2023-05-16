@@ -1,6 +1,7 @@
 var body = document.querySelector('body');
 body.style.margin = '0';
 body.style.minHeight = '900px';
+body.style.fontFamily = 'Arial';
 
 var header = document.querySelector('header');
 header.style.height = '80px';

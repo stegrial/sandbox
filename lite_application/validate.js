@@ -1,6 +1,10 @@
 var body = document.querySelector('body');
 body.style.margin = '0';
 body.style.minHeight = '900px';
+body.style.fontFamily = 'Arial';
+body.style.fontStyle = 'normal';
+body.style.fontVariant = 'normal';
+body.style.fontWeight = 'normal';
 
 var header = document.querySelector('header');
 header.style.height = '80px';
@@ -34,13 +38,22 @@ content.style.borderRadius = '5px';
 content.style.lineHeight = '40px';
 content.style.boxShadow = '0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)';
 
-var forms = document.querySelectorAll('body div h3');
-for (var h3 = 0; h3 < forms.length; h3++) {
-    var item = forms[h3];
-    item.style.color = '#5f5f5f';
-    item.style.margin = '20px 0';
+var hedersH3 = document.querySelectorAll('body div h3');
+for (var h3 = 0; h3 < hedersH3.length; h3++) {
+    var item = hedersH3[h3];
+    item.style.margin = '10px 0px';
     item.style.textAlign = 'left';
-    item.style.lineHeight = '0';
+    item.style.lineHeight = '21px';
+    item.style.setProperty('font-weight', 'normal', 'important');
+}
+
+var hedersH2 = document.querySelectorAll('body div h2');
+for (var h2 = 0; h2 < hedersH2.length; h2++) {
+    var item = hedersH2[h2];
+    item.style.margin = '10px 0px';
+    item.style.textAlign = 'left';
+    item.style.lineHeight = '21px';
+    item.style.setProperty('font-weight', 'normal', 'important');
 }
 
 var select = document.querySelector('body > div select');
