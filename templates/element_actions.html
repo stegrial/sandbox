@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Element Actions</title>
+    <style>
+        .container {
+            float: left;
+            margin-right: 50px;
+            height: 230px;
+        }
+        /* select {
+            padding: .6em 1.4em .5em .8em; width: 100%;
+        } */
+    </style>
+    <script>
+        function clickFunction() {
+            document.getElementById("click").textContent = "Element is clicked";
+        }
+    </script>
+    <script>
+        function doubleClickFunction() {
+            document.getElementById("double-click").textContent = "Element is double clicked";
+        }
+    </script>
+</head>
+<body>
+
+<div class="container">
+    <h2>Click element</h2>
+    <button type="button" onclick="clickFunction()">Click this button</button>
+    <p id="click"></p>
+</div>
+
+<div class="container">
+    <h2>Double click element</h2>
+    <p ondblclick="doubleClickFunction()">Double-click this paragraph to trigger the function</p>
+    <p id="double-click"></p>
+</div>
+
+<div class="container">
+    <h2>Set value</h2>
+    <label for="set-value">Text input</label>
+    <input type="text" id="set-value" name="set-value-name" placeholder="Set value here">
+</div>
+
+<div class="container">
+    <h2>Clear value</h2>
+    <label for="clear-value">Text input</label>
+    <input type="text" id="clear-value" name="clear-value-name" placeholder="Value has been cleared" value="Clear this value">
+</div>
+
+<div class="container">
+    <h2>Select by index</h2>
+    <label for="select-by-index">Choose a car:</label>
+    <select name="select-by-index-name" id="select-by-index">
+        <option value="volvo-value" selected>Volvo</option>
+        <option value="saab-value">Saab</option>
+        <option value="opel-value">Opel</option>
+        <option value="audi-value">Audi</option>
+    </select>
+</div>
+
+<div class="container">
+    <h2>Select by visible text</h2>
+    <label for="select-by-visible-text">Choose a car:</label>
+    <select name="select-by-visible-text-name" id="select-by-visible-text">
+        <option value="volvo-value">Volvo</option>
+        <option value="saab-value" selected>Saab</option>
+        <option value="opel-value">Opel</option>
+        <option value="audi-value">Audi</option>
+        <optgroup label="group"></optgroup>
+            <option value="audi-value">BMV</option>
+        </optgroup>
+    </select>
+</div>
+
+<div class="container">
+    <h2>Select by attribute</h2>
+    <label for="select-by-attr">Choose a car:</label>
+    <select name="select-by-attr-name" id="select-by-attr">
+        <option id="volvo-id" value="volvo-value">Volvo</option>
+        <option id="saab-id" value="saab-value">Saab</option>
+        <option id="opel-id" value="opel-value" selected>Opel</option>
+        <option id="audi-id" value="audi-value">Audi</option>
+    </select>
+</div>
+
+<div class="container">
+    <h2>Switch to iframe</h2>
+    <iframe id="iframe-window" src="https://trueautomation.io"></iframe>
+</div>
+
+</body>
+</html>

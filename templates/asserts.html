@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Asserts</title>
+    <style>
+        .container {
+            float: left;
+            margin-right: 50px;
+            height: 230px;
+        }
+        button, select {
+            display: block;
+            /* vertical-align: middle; */
+            height: 30px;
+            width: auto;
+            margin-top: 15px;
+        }
+        button.hidden {
+            visibility: hidden;
+        }
+        button.visible {
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Element has value</h2>
+    <label for="has-value">Text input</label>
+    <input type="text" id="has-value" value="I have the value">
+</div>
+
+<div class="container">
+    <h2>Element has text</h2>
+    <a href="https://trueautomation.io/docs/">
+        <span>I am the link text</span>
+    </a>
+</div>
+
+<div class="container">
+    <h2>Element has property with value</h2>
+<!--    Element has property "innerText" with value "I am child", https://www.w3schools.com/jsref/dom_obj_all.asp-->
+    <a id="has-property-with-value" href="https://trueautomation.io/docs/">
+        <span>I am a child with innerText</span>
+    </a>
+</div>
+
+<div class="container">
+    <h2>Element has attribute with value</h2>
+<!--    Element has attribute "value" with value "I am value attribute", https://stackoverflow.com/questions/6003819/what-is-the-difference-between-properties-and-attributes-in-html-->
+    <label for="has-attr-value">Text input</label>
+    <input type="text" id="has-attr-value" value="My attribute is value">
+    <button id="has-attr-type" type="button">I have the attribute - type</button>
+</div>
+
+<div class="container">
+    <h2>Element is clickable</h2>
+    <button id="assert-clickable" type="button">I am clickable</button>
+</div>
+
+<div class="container">
+    <h2>Element is not clickable</h2>
+    <button id="assert-not-clickable" type="button" disabled>I am NOT clickable</button>
+</div>
+
+<div class="container">
+    <h2>Element is displayed</h2>
+    <button id="assert-displayed-active" type="button" class="visible">I am displayed</button>
+    <button id="assert-displayed-inactive" type="button" class="visible" disabled>I am inactive, but also displayed</button>
+</div>
+
+<div class="container">
+    <h2>Element is not displayed</h2>
+    <button id="assert-not-displayed" type="button" class="hidden">I am hidden</button>
+</div>
+
+<div class="container">
+    <h2>Element is enabled</h2>
+    <button id="assert-enabled" type="button">I am enabled</button>
+</div>
+
+<div class="container">
+    <h2>Element is disabled</h2>
+    <button id="assert-disabled" type="button" disabled>I am disabled</button>
+</div>
+
+<div class="container">
+    <h2>Element is existing</h2>
+    <button id="assert-existing-active" type="button">I am existing</button>
+    <button id="assert-existing-inactive" type="button" disabled>I am inactive, but I exist</button>
+    <button id="assert-existing-hidden" type="button" class="hidden">I am hidden, but also exist</button>
+</div>
+
+<div class="container">
+    <h2>Element is not existing</h2>
+    <button id="assert-not-existing" type="button">I am NOT existing</button>
+</div>
+
+<div class="container">
+    <h2>Element is focused</h2>
+    <label for="assert-focused">Text input</label>
+    <input type="text" id="assert-focused" placeholder="I am focused" autofocus>
+</div>
+
+<div class="container">
+    <h2>Element is not focused</h2>
+    <label for="assert-not-focused">Text input</label>
+    <input type="text" id="assert-not-focused" placeholder="I am NOT focused">
+</div>
+
+<div class="container">
+    <h2>Element is selected</h2>
+    <label for="asset-is-selected">Choose a car:</label>
+    <select name="asset-is-selected-name" id="asset-is-selected">
+        <option value="volvo-value">Volvo</option>
+        <option value="saab-value">Saab</option>
+        <option value="opel-value" selected>Opel</option>
+        <option value="audi-value">Audi</option>
+    </select>
+</div>
+
+<div class="container">
+    <h2>Element is not selected</h2>
+    <label for="asset-not-selected">Choose a car:</label>
+    <select name="asset-is-selected-name" id="asset-not-selected">
+        <option value="volvo-value" selected>Volvo</option>
+        <option value="saab-value">Saab</option>
+        <option value="opel-value">Opel</option>
+        <option value="audi-value">Audi</option>
+    </select>
+</div>
+
+</body>
+</html>

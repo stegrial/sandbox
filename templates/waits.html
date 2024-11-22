@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Waits</title>
+    <style>
+        .container {
+            float: left;
+            margin-right: 50px;
+            height: 230px;
+        }
+        button {
+            vertical-align: middle;
+            height: 40px;
+            width: 140px;
+        }
+        button.hidden {
+            visibility: hidden;
+        }
+        button.visible {
+            visibility: visible;
+        }
+    </style>
+
+    <script>
+        setTimeout(function() {
+            document.getElementById("wait-clickable").disabled = false;
+            document.getElementById("wait-enabled").disabled = false;
+            document.getElementById("wait-not-clickable").disabled = true;
+            document.getElementById("wait-disabled").disabled = true;
+            document.getElementById("wait-displayed").className = 'visible';
+            document.getElementById("wait-not-displayed").className = 'hidden';
+
+            const newElement = document.createElement("button");
+            newElement.id = "wait-exist";
+            newElement.textContent = "I am created )";
+            document.getElementsByClassName("target-exist")[0].appendChild(newElement);
+
+            document.getElementById("wait-not-exist").remove();
+        }, 3000);
+    </script>
+</head>
+<body>
+
+<div class="container">
+    <h2>Wait for element clickable</h2>
+    <button id="wait-clickable" type="button" disabled>I become clickable</button>
+</div>
+
+<div class="container">
+    <h2>Wait for element not clickable</h2>
+    <button id="wait-not-clickable" type="button">I become NOT clickable</button>
+</div>
+
+<div class="container">
+    <h2>Wait for element displayed</h2>
+    <button id="wait-displayed" type="button" class="hidden">I become visible</button>
+</div>
+
+<div class="container">
+    <h2>Wait for element not displayed</h2>
+    <button id="wait-not-displayed" type="button">I become hidden</button>
+</div>
+
+<div class="container">
+    <h2>Wait for element enabled</h2>
+    <button id="wait-enabled" type="button" disabled>I become enabled</button>
+</div>
+
+<div class="container">
+    <h2>Wait for element disabled</h2>
+    <button id="wait-disabled" type="button">I become disabled</button>
+</div>
+
+<div class="container target-exist">
+    <h2>Wait for element exist</h2>
+</div>
+
+<div class="container">
+    <h2>Wait for element not exist</h2>
+    <button id="wait-not-exist" type="button">I will be removed (</button>
+</div>
+
+</body>
+</html>
